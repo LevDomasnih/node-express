@@ -3,7 +3,7 @@ const router = Router()
 
 router.get('/', (req, res) => {
   res.render('courses', {
-    title: 'Courses page',
+    title: 'Course page',
     isCourses: true
   })
 })
