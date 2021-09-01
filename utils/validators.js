@@ -28,3 +28,9 @@ exports.registerValidators = [
 
   body("name", "Min name is 3 char").isLength({ min: 3 }).trim(),
 ]
+
+exports.courseValidators = [
+  body('title', "Min title length 3 char").isLength({min: 3}).trim(),
+  body('price', 'Enter valid price').isNumeric(),
+  body('img', "Enter valid url image").isURL()
+]
