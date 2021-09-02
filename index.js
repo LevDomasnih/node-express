@@ -18,6 +18,7 @@ const profileRoutes = require('./routes/profile')
 const varMiddleware = require('./middleware/variables')
 const userMiddleware = require('./middleware/user')
 const keys = require('./keys')
+const compression = require('compression')
 const errorHandler = require('./middleware/error')
 const fileMiddleware = require('./middleware/file')
 const helmet = require('helmet')
@@ -59,6 +60,7 @@ app.use(helmet({contentSecurityPolicy: {
     }
   }})
 );
+app.use(compression())
 app.use(varMiddleware)
 app.use(userMiddleware)
 
